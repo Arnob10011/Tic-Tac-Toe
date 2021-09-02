@@ -1,0 +1,134 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  background: #2c6e49;
+  /* background: rgb(44, 110, 73); */
+}
+
+.tic-tac-toe__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.current--player {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.7rem 1.7rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: 0;
+  border: 0;
+  box-shadow: 0 1.75rem 3.5rem rgb(0 0 0 / 10%);
+  backdrop-filter: blur(15px);
+}
+
+.current--player:hover {
+  cursor: pointer;
+}
+
+.box__content {
+  width: 670px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-color: #4c956c;
+  border-radius: 1rem;
+  border: 2rem solid #37493f;
+  position: relative;
+}
+
+.box {
+  border: 1px solid #37493f;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  flex-direction: column;
+  font-size: 5rem;
+  flex-grow: 3;
+}
+
+@media screen and (max-width: 768px) {
+  .box__content {
+    width: 650px;
+    height: 500px;
+  }
+  .box {
+    font-size: 4rem;
+  }
+  .current--player {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .box__content {
+    width: 314px;
+    height: 300px;
+  }
+  .box {
+    font-size: 3rem;
+  }
+  .current--player {
+    font-size: 1.7rem;
+  }
+}
+
+.blur--effect {
+  color: rgba(255, 255, 255, 0.6);
+  filter: blur(15px);
+}
+
+.result {
+  position: absolute;
+  text-transform: uppercase;
+}
+.show__result {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  width: 100vw;
+  text-align: center;
+}
+.player--results {
+  font-size: 3.4rem;
+  color: #fff;
+}
+.restart {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.7rem 1.7rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  outline: 0;
+  border: 0;
+  box-shadow: 0 1.75rem 3.5rem rgb(0 0 0 / 10%);
+  backdrop-filter: blur(15px);
+  transition: all 0.25s;
+}
+
+.restart:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  background: rgb(251, 251, 212);
+}
